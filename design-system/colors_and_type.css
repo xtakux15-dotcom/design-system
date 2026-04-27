@@ -1,0 +1,222 @@
+/* =====================================================
+   xtakux15 Design System — Colors & Typography
+   Base tokens + semantic aliases
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&family=Noto+Sans+JP:wght@400;500;700;900&display=swap');
+
+/* ─── COLOR TOKENS ─────────────────────────────────── */
+:root {
+  /* Backgrounds */
+  --color-bg-primary:       #080C14;
+  --color-bg-secondary:     #0F1520;
+  --color-bg-section-alt:   #111827;
+  --color-bg-section-mid:   #1A1F2E;
+
+  /* Accent */
+  --color-accent-lime:      #AAFF00;
+  --color-accent-lime-dim:  #88CC00;
+  --color-accent-orange:    #FF4D00;
+  --color-accent-yellow:    #FFE100;
+
+  /* Section stage backgrounds */
+  --color-section-dark:     #080C14;
+  --color-section-mid:      #1A1F2E;
+  --color-section-lime:     #AAFF00;
+  --color-section-orange:   #FF4D00;
+
+  /* Text */
+  --color-text-primary:     #F0F4F8;
+  --color-text-secondary:   #6B7280;
+  --color-text-muted:       #374151;
+  --color-text-on-lime:     #080C14;
+  --color-text-on-orange:   #F0F4F8;
+
+  /* Border */
+  --color-border:           rgba(255,255,255,0.08);
+  --color-border-accent:    var(--color-accent-lime);
+  --color-border-strong:    rgba(255,255,255,0.20);
+}
+
+/* ─── SEMANTIC COLOR ALIASES ──────────────────────── */
+:root {
+  --bg:               var(--color-bg-primary);
+  --surface:          var(--color-bg-secondary);
+  --fg:               var(--color-text-primary);
+  --fg2:              var(--color-text-secondary);
+  --fg3:              var(--color-text-muted);
+  --accent:           var(--color-accent-lime);
+  --accent-hover:     var(--color-accent-lime-dim);
+  --accent-alt:       var(--color-accent-orange);
+  --border:           var(--color-border);
+}
+
+/* ─── TYPOGRAPHY FOUNDATIONS ───────────────────────── */
+:root {
+  --font-display-en:  'Montserrat', system-ui, sans-serif;
+  --font-display-ja:  'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+  --font-body:        'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+  --font-mono:        'Courier New', monospace;
+
+  --text-2xs:   0.6875rem;
+  --text-xs:    0.8125rem;
+  --text-sm:    0.9375rem;
+  --text-base:  1.125rem;
+  --text-lg:    1.375rem;
+  --text-xl:    1.75rem;
+  --text-2xl:   2.25rem;
+  --text-3xl:   3rem;
+  --text-4xl:   4rem;
+  --text-5xl:   6rem;
+  --text-6xl:   8rem;
+
+  --weight-regular:     400;
+  --weight-medium:      500;
+  --weight-bold:        700;
+  --weight-extrabold:   800;
+  --weight-black:       900;
+
+  --leading-tight:    1.05;
+  --leading-snug:     1.2;
+  --leading-normal:   1.5;
+  --leading-relaxed:  1.65;
+  --leading-loose:    1.8;
+
+  --tracking-tight:   -0.02em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.05em;
+  --tracking-wider:    0.12em;
+  --tracking-widest:   0.22em;
+}
+
+/* ─── SEMANTIC TYPE ROLES ──────────────────────────── */
+:root {
+  --type-display-xl:    var(--weight-black) var(--text-6xl)/var(--leading-tight) var(--font-display-en);
+  --type-display-lg:    var(--weight-black) var(--text-5xl)/var(--leading-tight) var(--font-display-en);
+  --type-display-md:    var(--weight-black) var(--text-4xl)/var(--leading-tight) var(--font-display-en);
+
+  --type-ja-display-xl: var(--weight-black) var(--text-5xl)/var(--leading-tight) var(--font-display-ja);
+  --type-ja-display-lg: var(--weight-black) var(--text-3xl)/var(--leading-snug) var(--font-display-ja);
+
+  --type-h1:  var(--weight-extrabold) var(--text-3xl)/var(--leading-snug) var(--font-display-en);
+  --type-h2:  var(--weight-bold)      var(--text-2xl)/var(--leading-snug) var(--font-display-en);
+  --type-h3:  var(--weight-bold)      var(--text-xl)/var(--leading-snug)  var(--font-display-en);
+  --type-h4:  var(--weight-bold)      var(--text-lg)/var(--leading-normal) var(--font-display-en);
+
+  --type-body-lg: var(--weight-regular) var(--text-base)/var(--leading-relaxed) var(--font-body);
+  --type-body:    var(--weight-regular) var(--text-sm)/var(--leading-relaxed)   var(--font-body);
+  --type-body-sm: var(--weight-regular) var(--text-xs)/var(--leading-loose)     var(--font-body);
+
+  --type-label-lg: var(--weight-black)  var(--text-sm)/1   var(--font-display-en);
+  --type-label:    var(--weight-bold)   var(--text-xs)/1   var(--font-display-en);
+  --type-label-sm: var(--weight-bold)   var(--text-2xs)/1  var(--font-display-en);
+
+  --type-mono: var(--weight-regular) var(--text-xs)/var(--leading-normal) var(--font-mono);
+}
+
+/* ─── SPACING TOKENS ───────────────────────────────── */
+:root {
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-8:  32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  --section-pad-y:  80px;
+  --section-pad-x:  40px;
+
+  --grid-cols:       12;
+  --grid-gutter:     24px;
+  --grid-max-width:  1440px;
+
+  --radius-none:   0px;
+  --radius-sm:     4px;
+  --radius-md:     8px;
+  --radius-full:   9999px;
+
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-bounce:   cubic-bezier(0.34, 1.56, 0.64, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+}
+
+/* ─── ANIMATION KEYFRAMES ──────────────────────────── */
+
+@keyframes xtk-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes xtk-glitch-clip {
+  0%   { clip-path: inset(20% 0 50% 0); transform: translate(-4px, 0); }
+  20%  { clip-path: inset(70% 0 2%  0); transform: translate(4px, 0); }
+  40%  { clip-path: inset(40% 0 30% 0); transform: translate(-2px, 2px); }
+  60%  { clip-path: inset(10% 0 60% 0); transform: translate(3px, -1px); }
+  80%  { clip-path: inset(55% 0 15% 0); transform: translate(-3px, 1px); }
+  100% { clip-path: inset(20% 0 50% 0); transform: translate(0, 0); }
+}
+@keyframes xtk-glitch-color-r {
+  0%, 100% { transform: translate(0); opacity: 0; }
+  10%, 90% { opacity: 0.7; }
+  50%       { transform: translate(3px, -1px); }
+}
+@keyframes xtk-glitch-color-b {
+  0%, 100% { transform: translate(0); opacity: 0; }
+  10%, 90% { opacity: 0.7; }
+  50%       { transform: translate(-3px, 1px); }
+}
+
+@keyframes xtk-float {
+  0%, 100% { transform: translateY(0px)    rotate(0deg); }
+  33%       { transform: translateY(-10px)  rotate(0.8deg); }
+  66%       { transform: translateY(-5px)   rotate(-0.5deg); }
+}
+
+/* ─── UTILITY CLASSES ──────────────────────────────── */
+.xtk-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: xtk-marquee 40s linear infinite;
+}
+.xtk-marquee-track--slow  { animation-duration: 60s; }
+.xtk-marquee-track--fast  { animation-duration: 20s; }
+.xtk-marquee-track--rev   { animation-direction: reverse; }
+
+.xtk-float {
+  animation: xtk-float 4s ease-in-out infinite;
+}
+.xtk-float--slow { animation-duration: 6s; }
+
+.xtk-glitch-wrap { position: relative; display: inline-block; }
+.xtk-glitch-wrap::before,
+.xtk-glitch-wrap::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+.xtk-glitch-wrap::before { color: #FF4D00; mix-blend-mode: screen; }
+.xtk-glitch-wrap::after  { color: #00FFFF; mix-blend-mode: screen; }
+.xtk-glitch-wrap:hover::before {
+  animation: xtk-glitch-color-r 0.5s steps(2) forwards,
+             xtk-glitch-clip    0.5s steps(4) forwards;
+}
+.xtk-glitch-wrap:hover::after {
+  animation: xtk-glitch-color-b 0.5s steps(2) 0.05s forwards,
+             xtk-glitch-clip    0.5s steps(4) 0.05s forwards;
+}
+
+.xtk-stage { width: 100%; padding: var(--section-pad-y) var(--section-pad-x); }
+.xtk-stage--dark   { background: var(--color-section-dark);  color: var(--color-text-primary); }
+.xtk-stage--mid    { background: var(--color-section-mid);   color: var(--color-text-primary); }
+.xtk-stage--lime   { background: var(--color-section-lime);  color: var(--color-text-on-lime); }
+.xtk-stage--orange { background: var(--color-section-orange); color: var(--color-text-on-orange); }
