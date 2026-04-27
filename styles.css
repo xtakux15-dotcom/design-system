@@ -1442,7 +1442,7 @@ section {
   color: var(--t-fg2);
 }
 
-/* ─── RESPONSIVE NICETIES (light) ────────── */
+/* ─── RESPONSIVE: TABLET (≤1024px) ─────────── */
 @media (max-width: 1024px) {
   .hero-inner,
   .pricing-grid,
@@ -1465,4 +1465,147 @@ section {
   .pricing-table-head > div:nth-child(3),
   .pricing-table-row > div:nth-child(3) { display: none; }
   .form-row.two-col { grid-template-columns: 1fr; }
+  .hero-visual { display: none; }
+  .company-mark { position: static; }
+}
+
+/* ─── RESPONSIVE: MOBILE (≤768px) ──────────── */
+@media (max-width: 768px) {
+  :root {
+    --section-pad-x: 20px;
+  }
+
+  /* Header */
+  .site-header { padding: 16px 20px; }
+
+  /* Hero */
+  .hero { padding: 100px 20px 60px; }
+  .hero h1 { font-size: clamp(36px, 10vw, 56px); }
+  .hero-sub { font-size: 15px; }
+  .hero-ctas { flex-direction: column; align-items: stretch; }
+  .btn-primary, .btn-secondary { text-align: center; justify-content: center; }
+  .hero-phones { flex-direction: column; gap: 16px; }
+  .phone-card .number { font-size: 18px; }
+
+  /* Marquee */
+  .marquee-divider .xtk-marquee-track { font-size: 22px; }
+
+  /* Sections general */
+  .issues      { padding: 64px 20px; }
+  .reasons     { padding: 64px 20px; }
+  .services    { padding: 64px 20px; }
+  .pricing     { padding: 64px 20px; }
+  .flow        { padding: 64px 20px; }
+  .areas       { padding: 64px 20px; }
+  .stats-band  { padding: 48px 20px; }
+  .voices      { padding: 48px 20px 64px; }
+  .faq         { padding: 64px 20px; }
+  .company     { padding: 64px 20px; }
+  .contact     { padding: 64px 20px; }
+
+  .section-header { margin-bottom: 40px; }
+  .section-h2-en { font-size: clamp(28px, 8vw, 48px); }
+  .section-h2-ja { font-size: 16px; }
+
+  /* Issues */
+  .issues-solution { font-size: clamp(24px, 6vw, 40px); }
+
+  /* Reasons */
+  .reason-card { padding: 32px 24px; }
+  .reason-card .title-en { font-size: 28px; }
+
+  /* Services */
+  .service-row {
+    grid-template-columns: 48px 1fr 40px;
+    gap: 12px;
+    padding: 20px 0;
+  }
+  .service-row .name-en { font-size: 16px; }
+  .service-row .desc { grid-column: 2 / -1; font-size: 13px; }
+
+  /* Pricing */
+  .simulator { padding: 24px 20px; }
+  .sim-radio { grid-template-columns: 1fr 1fr 1fr; }
+  .sim-result .price { font-size: 32px; }
+
+  /* Flow */
+  .flow-track { grid-template-columns: 1fr; gap: 24px; }
+  .flow-step { padding: 0; flex-direction: row; gap: 20px; align-items: flex-start; }
+  .flow-step .ring { width: 48px; height: 48px; font-size: 16px; flex-shrink: 0; margin-bottom: 0; }
+  .flow-step .step-en { margin-bottom: 4px; }
+
+  /* Areas */
+  .area-card { padding: 24px 20px; }
+  .area-card .city-en { font-size: 40px; }
+  .area-map svg { height: 180px; }
+
+  /* Stats */
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .stat-card .num-huge { font-size: 56px; }
+
+  /* Voices */
+  .voices-grid { grid-template-columns: 1fr; }
+
+  /* FAQ */
+  .faq-q { grid-template-columns: 40px 1fr 48px; gap: 12px; padding: 20px 0; }
+  .faq-q .q-text { font-size: 15px; }
+  .faq-a-inner { grid-template-columns: 40px 1fr; }
+  .faq-a-inner > span:last-child { display: none; }
+
+  /* Company */
+  .company-grid { gap: 32px; }
+  .company-row { grid-template-columns: 120px 1fr; gap: 12px; }
+  .company-mark { padding: 32px 24px; }
+  .company-mark .big-mark { font-size: 64px; }
+
+  /* Contact */
+  .contact-bg { font-size: 160px; }
+  .contact-side h3 { font-size: 36px; }
+  .contact-side .ja-tagline { font-size: 18px; }
+  .form { padding: 28px 20px; }
+  .form-segment { grid-template-columns: 1fr 1fr; }
+
+  /* Footer */
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+  .site-footer { padding: 48px 20px 24px; }
+}
+
+/* ─── RESPONSIVE: SMALL MOBILE (≤480px) ────── */
+@media (max-width: 480px) {
+  .hero { padding: 88px 16px 48px; }
+  .hero h1 { font-size: 36px; }
+  .hero-tag { font-size: 9px; letter-spacing: 0.14em; }
+
+  .issues { padding: 48px 16px; }
+  .reasons { padding: 48px 16px; }
+  .services { padding: 48px 16px; }
+  .pricing { padding: 48px 16px; }
+  .flow { padding: 48px 16px; }
+  .areas { padding: 48px 16px; }
+  .voices { padding: 40px 16px 48px; }
+  .faq { padding: 48px 16px; }
+  .company { padding: 48px 16px; }
+  .contact { padding: 48px 16px; }
+
+  .section-h2-en { font-size: 28px; }
+
+  .reason-card .title-en { font-size: 24px; }
+
+  .service-row { grid-template-columns: 40px 1fr 32px; gap: 8px; }
+  .service-row .name-en { font-size: 14px; }
+
+  .stats-grid { grid-template-columns: 1fr 1fr; }
+  .stat-card .num-huge { font-size: 44px; }
+
+  .company-row { grid-template-columns: 1fr; gap: 4px; }
+  .company-row dt { padding-top: 0; }
+
+  .form { padding: 24px 16px; }
+  .form-segment { grid-template-columns: 1fr 1fr; }
+
+  .channel .num { font-size: 24px; }
+
+  .site-footer { padding: 40px 16px 24px; }
+  .footer-top { gap: 24px; }
 }
